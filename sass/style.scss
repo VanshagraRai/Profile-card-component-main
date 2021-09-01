@@ -1,0 +1,64 @@
+@import "./colorVariables";
+@import "./selectAllElements";
+@mixin displayFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: $Dark-cyan;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0.9;
+  @include displayFlex;
+  &::before {
+    content: "";
+    background-image: url("../images/bg-pattern-top.svg"),
+      url("../images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom 11rem right 45rem, top 18rem left 40rem;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.9;
+    z-index: -1;
+    position: absolute;
+  }
+}
+.main-box {
+  // width: 22px;
+  // height: 22px;
+  border: 2px solid red;
+  //
+  .head {
+    &::before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      background-image: url("../images/bg-pattern-card.svg");
+      background-repeat: no-repeat;
+      opacity: 0.9;
+      z-index: -1;
+      position: absolute;
+    }
+  }
+
+  // .head::after{
+  //   content: "";
+  // background-image: url('../images/image-victor.jpg');
+  // background-repeat: no-repeat;
+  // background-position: center;
+  // background-size: auto;
+  // z-index: 1;
+  // opacity: 0.9;
+  // height: 100px;
+  // width: 100px;
+
+  // }
+}
