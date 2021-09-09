@@ -15,7 +15,7 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://vanshagrarai.github.io/Profile-card-component-main/)
+- Live Site URL: [ live site URL ](https://vanshagrarai.github.io/Profile-card-component-main/)
 
 ### Built with
 
