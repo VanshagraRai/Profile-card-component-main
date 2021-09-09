@@ -12,12 +12,13 @@
   box-sizing: border-box;
 }
 
-.container {
+/*Background image*/
+body {
   background-color: $Dark-cyan;
   height: 100vh;
   width: 100vw;
   opacity: 0.9;
-  @include displayFlex;
+  @include displayFlex();
   &::before {
     content: "";
     background-image: url("../images/bg-pattern-top.svg"),
@@ -31,34 +32,78 @@
     position: absolute;
   }
 }
-.main-box {
-  // width: 22px;
-  // height: 22px;
-  border: 2px solid red;
-  //
-  .head {
-    &::before {
-      content: "";
-      height: 100%;
-      width: 100%;
-      background-image: url("../images/bg-pattern-card.svg");
-      background-repeat: no-repeat;
-      opacity: 0.9;
-      z-index: -1;
-      position: absolute;
-    }
+
+/*Container Part*/
+.container {
+  height: 50%;
+  width: 23%;
+  border-radius: 20px;
+  overflow: hidden;
+  font-family: "Kumbh Sans", sans-serif;
+  h3 {
+    color: $Very-dark-desaturated-blue;
   }
+  p {
+    font-size: 0.8rem;
+    color: $Dark-gray;
+  }
+}
 
-  // .head::after{
-  //   content: "";
-  // background-image: url('../images/image-victor.jpg');
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // background-size: auto;
-  // z-index: 1;
-  // opacity: 0.9;
-  // height: 100px;
-  // width: 100px;
+/*Head Part */
+.head {
+  height: 37%;
+  .pattern {
+    width: 100%;
+    height: 100%;
+  }
+  .victor {
+    border: 4px solid white;
+    border-radius: 49px;
+    margin: 0 auto;
+    display: block;
+    transform: translateY(-66px);
+  }
+}
 
-  // }
+/*Main part of the body*/
+main {
+  height: 63%;
+  background-color: #ffff;
+  text-transform: capitalize;
+}
+.main-Part {
+  @include displayFlex();
+  padding: 13%;
+  h3 {
+    position: relative;
+    top: 12px;
+    left: 19px;
+  }
+  p:first-of-type {
+    position: relative;
+    top: 12px;
+    left: 28px;
+  }
+  p:last-child {
+    position: relative;
+    top: 42px;
+    right: 64px;
+  }
+}
+
+/*Line Part*/
+hr {
+  position: relative;
+  top: 16px;
+  color: $Dark-grayish-blue;
+  font-weight: 20;
+}
+
+/*Footer Part*/
+.main-foot {
+  span {
+    margin: 37px 26px;
+    text-align: center;
+    display: inline-block;
+  }
 }
